@@ -6,3 +6,4 @@ export const addPost = newPost => {
         payload: newPost
     }
 }
+

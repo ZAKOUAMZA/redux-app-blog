@@ -1,14 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client'; // Remplacez 'react-dom' par 'react-dom/client'
 import App from './App';
 import { Provider } from 'react-redux';
-import Stores from './Js/Stores';
+import store from './Js/Stores/store'; // Assurez-vous que le chemin vers votre store est correct
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <React.StrictMode>
-    <Provider Stores={Stores}> {/* the component Provider needs a props store  */}
+    <Provider store={store}> {/* Le composant Provider a besoin de la prop store */}
       <App />
     </Provider>
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );

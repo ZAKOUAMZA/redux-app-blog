@@ -1,7 +1,7 @@
 import './App.css';
+import CreatePost from './Components/CreatePosts/createPost';
+import PostList from './Components/PostLists/postList';
 
-import CreatePost from './Components/CreatePost';
-import PostList from './Components/PostList';
 
 function App() {
 
